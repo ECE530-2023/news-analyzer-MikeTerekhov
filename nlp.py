@@ -2,7 +2,7 @@ def choose_file():
     pass
 
 def translate():
-    pass
+    return "Document translated to English"
 
 def summary():
     return "Brief summary of the document"
