@@ -10,8 +10,6 @@ def checker(file_name):
         print('valid')
     if file_name.endswith('.test'):
         print('valid')
-    if file_name.lower().endswith(('.png', '.jpg', '.jpeg'))
-        print("valid or not IDK yet")
     else:
         return "Error related to uploader"
 
