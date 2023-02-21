@@ -11,5 +11,6 @@ def checker(file_name):
     if file_name.endswith('.test'):
         print('valid')
     else:
+        print("hi")
         return "Error related to uploader"
 
