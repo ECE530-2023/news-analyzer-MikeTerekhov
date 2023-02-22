@@ -2,6 +2,11 @@ import pytest
 
 from secure_file_upload import * 
 
-def test_checker_function():
-    # assert checker("hi.LOL") == True
-    assert checker("hi.txt") == True
+class TestClass:
+
+    def test_checker_function(self):
+        # assert checker("hi.LOL") == True
+        assert checker("hi.txt") == True
+    
+    def test_secure_login(self):
+        assert secure_login("hi", 345) == True
