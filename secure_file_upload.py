@@ -8,9 +8,10 @@ def uploader():
 def checker(file_name):
     if file_name.endswith('.txt'):
         print('valid')
+        return True
     if file_name.endswith('.test'):
         print('valid')
+        return True
     else:
-        print("hi")
-        return "Error related to uploader"
-
+        print( "Error related to uploader")
+        return False
