@@ -1,0 +1,6 @@
+Error 001 : File format not supported
+Error 002 : Incorrect username
+Error 003 : Incorrect password
+Error 004 : Unstable connection to internet
+Error 005 : Duplicate file upload
+Error 006 : User does not exist
