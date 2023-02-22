@@ -5,10 +5,12 @@ def secure_login(username, password):
         if password == password_:
             return True
     return False
+    # Errors 001, 002, 006
 
 def uploader():
     print("file or image? : ")
-    file_name = input("Enter the name of the file you are uploading: ")
+    file_name = input("Enter the name of the file you are uploading: ") 
+    # Error 008
 
 def checker(file_name):
     if file_name.endswith('.txt'):
@@ -20,3 +22,4 @@ def checker(file_name):
     else:
         print( "Error related to uploader")
         return False
+    # Error 001
