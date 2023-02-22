@@ -9,4 +9,4 @@ class TestClass:
         assert checker("hi.txt") == True
     
     def test_secure_login(self):
-        assert secure_login("hi", 345) == True
+        assert secure_login("Mike", 123) == True

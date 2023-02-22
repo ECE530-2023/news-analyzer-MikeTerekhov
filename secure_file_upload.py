@@ -1,10 +1,10 @@
 def secure_login(username, password):
     username_ = "Mike"
     password_ = 123
-    if username == username_ & password == password_:
-        return True
-    else:
-        return False
+    if username == username_:
+        if password == password_:
+            return True
+    return False
 
 def uploader():
     print("file or image? : ")
