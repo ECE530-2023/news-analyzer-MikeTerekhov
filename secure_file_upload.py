@@ -7,9 +7,15 @@ def secure_login(username, password):
     return False
     # Errors 001, 002, 006
 
-def uploader():
-    print("file or image? : ")
-    file_name = input("Enter the name of the file you are uploading: ") 
+def uploader(type_in):
+    #type_in = input("file or image? : ")
+    #file_name = input("Enter the name of the file you are uploading: ") 
+    if type_in == "file":
+        return True
+    elif type_in == "image":
+        return True
+    else:
+        return False
     # Error 008
 
 def checker(file_name):
@@ -23,3 +29,5 @@ def checker(file_name):
         print( "Error related to uploader")
         return False
     # Error 001
+
+

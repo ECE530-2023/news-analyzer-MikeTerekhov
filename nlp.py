@@ -1,17 +1,40 @@
 def choose_file():
     pass
 
-def translate():
-    return "Document translated to English"
+# returns translated input
+def translate(input_text, in_language_key, out_language_key):
+    if in_language_key | out_language_key != "valid language":
+        return False
+    if in_language_key == out_language_key:
+        return False
+    if len(input_text) == 0:
+        return False
 
-def summary():
-    return "Brief summary of the document"
+# returns summary of input
+def summary(input_text):
+    if len(input_text) == 0:
+        return False
+    else:
+        return True
 
-def sentiments():
-    return "General sentiments of the file"
+# returns general sentiment of input
+def sentiments(input_text):
+    if len(input_text) == 0:
+        return False
+    else:
+        return True
 
-def search_file():
-    return "Allows user to search if a specific topic is present in document"
+# returns if input contains searched for information
+def search_file(keywords):
+    if len(keywords) == 0:
+        return False
+    else:
+        return True
 
-def key_words():
+# returns list of key words withing document and their definitions
+def key_words(input_text):
+    if len(input_text) == 0:
+        return False
+    else:
+        return True
     return "List of key words withing document and their definitions"
