@@ -9,6 +9,9 @@
 
 For our database structure design we have chosen to go with MongoDB database structure due to the nature of our input. Due to the fact that the main entity of our project is a document, it would be very difficult to store this information in a table based format such as SQL. Due to the fact that we are planning on splitting up the document into paragraphs and images, it would be easier to use a JSON format to store and query that information.
 
+# Why MongoDB?
+Mongo is much less structured. This will easier allow to altercation and addition of data collected from out documents
+
 # schema
 -----------------------------------
 ```
@@ -19,7 +22,7 @@ For our database structure design we have chosen to go with MongoDB database str
 }
 ```
 --------------------------------
-
+```
 {
     User storing : [
     {
@@ -30,7 +33,9 @@ For our database structure design we have chosen to go with MongoDB database str
     }
     ]
 }
+```
 -----------------------------------------------
+```
 {
     Document storing: [
     {
@@ -42,8 +47,9 @@ For our database structure design we have chosen to go with MongoDB database str
     }
     ]
 }
-
+```
 ----------------------------------------
+```
 {
     Document Analysis : [
     {
@@ -59,6 +65,7 @@ For our database structure design we have chosen to go with MongoDB database str
     }
     ]   
 }
+```
 
 
 
