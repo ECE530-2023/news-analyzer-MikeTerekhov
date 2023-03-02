@@ -1,9 +1,9 @@
 # news-analyzer-MikeTerekhov
-# added Github Actions -> currently failing because I dont have any Pytest cases
-# created majority of function stubs
-# implemented a test file with a test class for secure_file_uploader
-# created a txt file with errors and their descriptions 
-# Unit tests are created in test_unit_tests file for all API modules
+- added Github Actions -> currently failing because I dont have any Pytest cases
+- created majority of function stubs
+- implemented a test file with a test class for secure_file_uploader
+- created a txt file with errors and their descriptions 
+- Unit tests are created in test_unit_tests file for all API modules
 -------------------------------------------------------------------------
 # Explanation
 
@@ -12,8 +12,7 @@ For our database structure design we have chosen to go with MongoDB database str
 # Why MongoDB?
 Mongo is much less structured. This will easier allow to altercation and addition of data collected from out documents
 
-# schema
------------------------------------
+# Schema
 ```
 {
   _id: ObjectId(),
@@ -22,6 +21,7 @@ Mongo is much less structured. This will easier allow to altercation and additio
 }
 ```
 --------------------------------
+Users:
 ```
 {
     User storing : [
@@ -35,6 +35,7 @@ Mongo is much less structured. This will easier allow to altercation and additio
 }
 ```
 -----------------------------------------------
+Documents:
 ```
 {
     Document storing: [
@@ -49,6 +50,7 @@ Mongo is much less structured. This will easier allow to altercation and additio
 }
 ```
 ----------------------------------------
+Document Analysis:
 ```
 {
     Document Analysis : [
