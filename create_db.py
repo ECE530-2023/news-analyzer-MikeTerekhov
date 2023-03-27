@@ -63,5 +63,5 @@ for x in ans:
 print("----------------")
 
 from bson.objectid import ObjectId
-_id = ObjectId("64166089bb48a5eef4f6ae58")
-#user_collection.update_one({'_id': _id}, {"$addToSet" : {'documents_uploaded (ids)' : [123, 124, 125]}})
+_id = ObjectId("64166089bb48a5eef4f6ae59")
+#document_collection.update_one({'_id': _id}, {"$addToSet" : {'document (text)' : ["this", "is", "the", "text", "in", "the", "doc"]}})
