@@ -5,9 +5,12 @@ import os
 from flask import Flask, request, render_template
 from werkzeug.utils import secure_filename
 import PyPDF2
-from textblob import TextBlob
+from textblob import *
 import openai
 import re
+import nltk
+nltk.download('brown')
+nltk.download('punkt')
 
 app = Flask(__name__)
 
@@ -95,9 +98,14 @@ def view_document(document_id):
 def NLP(document_id):
     doc = documents.find_one({'_id': ObjectId(document_id)})
     text = doc['text']
-    blob = TextBlob(text)
-    sentiment = blob.sentiment.polarity
-    return render_template('NLP.html', document=doc, sentiment=sentiment)
+    word = request.args.get('word')
+    if word:
+        blob = TextBlob(text)
+        word_count = blob.words.count(word)
+        return render_template('NLP.html', document=doc, word_count=word_count, searched_word=word)
+    else:
+        sentiment = TextBlob(text).sentiment.polarity
+        return render_template('NLP.html', document=doc, sentiment=sentiment)
 
 if __name__ == '__main__':
     app.config['UPLOAD_FOLDER'] = 'uploads'

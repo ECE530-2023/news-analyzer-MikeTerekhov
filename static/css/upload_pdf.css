@@ -1,71 +1,51 @@
+/* Navbar styles */
 .navbar {
-    height: 20px;
-    overflow: visible;
-    background-color: lavender;
-    width: 100%;
-    padding: auto;
-    position: relative;
-    margin: 0 auto; /* center horizontally */
-  }
-  
-  .navbar a {
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-  }
-  
-  .navbar a:hover {
-    background-color: white;
-    color: black;
-  }
-  
-  .text {
-    background: linear-gradient(90deg, #00dbde, #fc00ff);
-    font-family: Poppins;
-    font-size: 40px;
-    text-transform: uppercase;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-top: 80px; /* Add margin-top to move text below navbar */
-  }
-  
-  .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  ul {
-    margin-top: 60px;
-  }
-  
-  body {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to-right, #fdfdfd, #ebedee 70%);
-    padding-top: 60px; /* Add padding equal to the height of the navbar */
-  }
+  margin-top: 20px;
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, sans-serif;
+}
 
-  .container2 {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    transform: translate(-0%, -0%);
-  }
+.navbar a {
+  float: left;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
 
-  .text_box {
-    background: linear-gradient(90deg, #00dbde, #fc00ff);
-    font-family: Poppins;
-    font-size: 40px;
-    text-transform: uppercase;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-top: 80px; /* Add margin-top to move text below navbar */
-    text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+.navbar a:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+.navbar a.active {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+
+/* page content styles */
+.content {
+  padding-top: 60px;
+}
+
+.text {
+  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  font-family: Poppins;
+  font-size: 40px;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 80px; /* Add margin-top to move text below navbar */
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
   
   
