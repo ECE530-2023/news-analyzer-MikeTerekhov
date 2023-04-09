@@ -2,25 +2,18 @@
 <html>
     <head>
         <title>PDF Upload</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/upload_pdf.css') }}">
     </head>
     <body>
-        <h1>Upload a PDF</h1>
-        <form action="/upload" method="post" enctype="multipart/form-data">
-            <input type="file" name="file">
-            <input type="submit" value="Upload">
-        </form>
-        <br>
-        <p>View options:</p>
-        <ul>
-            <li><a href="/documents">View all documents</a></li>
-            <li>
-                <form action="/view" method="get">
-                    <label for="document_id">View a specific document:</label>
-                    <input type="text" name="document_id" id="document_id" required>
-                    <input type="submit" value="Go">
-                </form>
-            </li>
-        </ul>
+        <div class="navbar">
+            <a href="/documents">All Documents</a>
+        </div>
+        <div class="container">
+            <h1 class="text">Upload a PDF</h1>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <input type="submit" value="Upload">
+            </form>
+        </div>
     </body>
 </html>
-

@@ -60,14 +60,10 @@ def view_document(document_id):
     doc = documents.find_one({'_id': ObjectId(document_id)})
     return render_template('view_document.html', document=doc)
 
-@app.route('/search', methods=['POST'])
-def search():
-    query = request.form['query']
-    doc_id = request.form['document_id']
-    doc = documents.find_one({'_id': ObjectId(doc_id)})
-    text = doc['text']
-    matches = [word for word in text.split() if query.lower() in word.lower()]
-    return render_template('search_results.html', query=query, matches=matches)
+@app.route('/NLP/<document_id>')
+def NLP(document_id):
+    doc = documents.find_one({'_id': ObjectId(document_id)})
+    return render_template('NLP.html', document=doc)
 
 if __name__ == '__main__':
     app.config['UPLOAD_FOLDER'] = 'uploads'

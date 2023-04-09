@@ -1,15 +1,19 @@
-<!-- view_document.html -->
 <!doctype html>
 <html>
     <head>
         <title>View Document</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/upload_pdf.css') }}">
     </head>
     <body>
-        <h1>{{ document.name }}</h1>
-        <form action="/search" method="post">
-            <label for="query">Search for a word:</label>
-            <input type="text" name="query" id="query" required>
-            <input type="hidden" name="document_id" value="{{ document._id }}">
-            <input type="submit" value="Search">
-        </form>
-    </body
+        <div class="container2">
+            <header class="text">{{ document.name }}</header>
+            <p>{{ document.text }}</p>
+        </div>
+        <div>
+            <a href="{{ url_for('NLP', document_id=document._id) }}", class="text">NLP</a>
+        </div>
+    </body>
+</html>
+
+
+
