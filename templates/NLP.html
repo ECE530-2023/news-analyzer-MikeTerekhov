@@ -1,6 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <title> NLP </title>
+<head>
+    <title>{{ document.name }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/upload_pdf.css') }}">
-    <header class="text">Text Analysis for : {{ document.name }}</header>
+</head>
+<body>
+    <h1 class="text">{{ document.name }}</h1>
+    <h2>Sentiment: {{ sentiment }}</h2>
+    <h2>Chat GPT 3 Summary:</h2>
+    <p>{{ summary }}</p>
+    <hr>
+</body>
 </html>
+

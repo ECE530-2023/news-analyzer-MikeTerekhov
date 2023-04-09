@@ -56,6 +56,17 @@
     left: 0%;
     transform: translate(-0%, -0%);
   }
+
+  .text_box {
+    background: linear-gradient(90deg, #00dbde, #fc00ff);
+    font-family: Poppins;
+    font-size: 40px;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 80px; /* Add margin-top to move text below navbar */
+    text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+}
   
   
   
