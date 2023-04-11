@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Definition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/upload_pdf.css') }}">
+</head>
+<body>  
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/documents">All Documents</a>
+    </nav>
+
+    <div>
+        <h1 class = "text">Sentiment Definition : </h1>
+        <h2> TextBlob returns polarity and subjectivity of a sentence. Polarity lies between [-1,1], -1 defines a negative sentiment and 1 defines a positive sentiment. Negation words reverse the polarity. TextBlob has semantic labels that help with fine-grained analysis. For example — emoticons, exclamation mark, emojis, etc. Subjectivity lies between [0,1]. Subjectivity quantifies the amount of personal opinion and factual information contained in the text. The higher subjectivity means that the text contains personal opinion rather than factual information.</h1>
+        <h2>Source : https://towardsdatascience.com/my-absolute-go-to-for-sentiment-analysis-textblob-3ac3a11d524</h1>
+    </div>
+</body>
+</html>

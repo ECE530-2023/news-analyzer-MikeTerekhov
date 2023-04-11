@@ -1,8 +1,10 @@
 import openai
-openai.api_key = "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"
+openai.api_key = "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"
 prompt = "Hello, World!"
 response = openai.Completion.create(
-  engine="text-davinci-002",
+  #davinci-codex
+  #text-davinci-002
+  engine="gpt-3.5-turbo",
   prompt=prompt,
   temperature=0.5,
   max_tokens=60,

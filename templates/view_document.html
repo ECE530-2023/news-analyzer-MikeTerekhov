@@ -5,6 +5,12 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='css/upload_pdf.css') }}">
     </head>
     <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <a href="/">Home</a>
+            <a href="/documents">All Documents</a>
+        </nav>
+        
         <div class="container2">
             <header class="text">{{ document.name }}</header>
             <p>{{ document.text }}</p>

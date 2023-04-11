@@ -13,6 +13,7 @@ nltk.download('brown')
 nltk.download('punkt')
 
 app = Flask(__name__)
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 cluster = MongoClient("mongodb+srv://terekhovhd:GreighT131@cluster0.g38mbdx.mongodb.net/?retryWrites=true&w=majority")
 db = cluster['myFirstDatabase']
@@ -106,6 +107,11 @@ def NLP(document_id):
     else:
         sentiment = TextBlob(text).sentiment.polarity
         return render_template('NLP.html', document=doc, sentiment=sentiment)
+    
+@app.route('/NLP/<document_id>/sentiment_def')
+def sentiment_def(document_id):
+    doc = documents.find_one({'_id': ObjectId(document_id)})
+    return render_template('sentiment_def.html', documents=doc)
 
 if __name__ == '__main__':
     app.config['UPLOAD_FOLDER'] = 'uploads'

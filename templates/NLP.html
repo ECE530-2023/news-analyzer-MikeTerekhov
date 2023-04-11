@@ -11,12 +11,12 @@
         <a href="/documents">All Documents</a>
     </nav>
 
-    <div class="container">
-        <h1 class="text">{{ document.name }}</h1>
+    <div>
+        <h1 class = "text">{{ document.name }}</h1>
         <h2>Sentiment: {{ sentiment }}</h2>
+        <a href="{{ url_for('sentiment_def', document_id=document._id) }}">Sentiment Definintion</a>
         <h2>Chat GPT 3 Summary:</h2>
         <p>{{ summary }}</p>
-        <hr>
         <form method="get">
             <label for="word">Search for word:</label>
             <input type="text" id="word" name="word">
