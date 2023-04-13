@@ -1,6 +1,12 @@
 # news-analyzer-MikeTerekhov
-- built seperate REST APIs that allow the user to upload a PDF file, and then perform sentiment analysis on uploaded documents.
+- built seperate REST APIs to :
+    - upload a PDF File
+    - obtain sentiment of file
+    - seperate web-scraping features
+    - ChatGPT implementation
+
 - stores all documents and their respective analysis in a MongoDB.
+
 - Fully functioning frontend with HTML, CSS, and Javascript
 -------------------------------------------------------------------------
 # MongoDB
