@@ -52,7 +52,10 @@ Documents:
     ]
 }
 ```
-
-
-
-
+-------------------------------------------
+# Goals of sentiment analysis & web-scraping
+- extract all text from PDF
+- be able to obtain the overall sentiment of the document
+- search and find the occurences of a certain keyword in a document
+- ChatGPT summary for the document (in progress)
+- Converse with ChatGPT about the text
