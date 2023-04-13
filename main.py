@@ -117,6 +117,15 @@ def sentiment_def(document_id):
     doc = documents.find_one({'_id': ObjectId(document_id)})
     return render_template('sentiment_def.html', documents=doc)
 
+# Error handling for 400 and 401 errors
+@app.errorhandler(400)
+def bad_request(error):
+    return error, 400
+
+@app.errorhandler(401)
+def unauthorized(error):
+    return error.description, 401
+
 if __name__ == '__main__':
     app.config['UPLOAD_FOLDER'] = 'uploads'
     app.run(debug=True)
