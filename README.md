@@ -1,9 +1,7 @@
 # news-analyzer-MikeTerekhov
-- added Github Actions 
-- created majority of function stubs
-- implemented a test file with a test class for secure_file_uploader
-- created a txt file with errors and their descriptions 
-- Unit tests are created in test_unit_tests file for all API modules
+- built seperate REST APIs that allow the user to upload a PDF file, and then perform sentiment analysis on uploaded documents.
+- stores all documents and their respective analysis in a MongoDB.
+- Fully functioning frontend with HTML, CSS, and Javascript
 -------------------------------------------------------------------------
 # MongoDB
 
@@ -44,37 +42,17 @@ Documents:
 ```
 {
     Document storing: [
-    {
-        _id: ObjectId(),
-        name: String,
-        type: String,
-        size: Number,
-        uploaded_at: Date
+    {   
+    "name": filename,
+    "type": "pdf",
+    "text": text,
+    "summary": get_summary(text),
+    "sentiment": get_sentiment(text)   
     }
     ]
 }
 ```
-----------------------------------------
-Document Analysis:
-```
-{
-    Document Analysis : [
-    {
-        _id: ObjectId(),
-        document_id: ObjectId(),
-        keywords: String,
-        text: String,
-        language: String,
-        sentiment: String,
-        entities: [{
-            name: String,
-            type: String,
-            relevance: Number
-            ]
-    }
-    ]   
-}
-```
+
 
 
 

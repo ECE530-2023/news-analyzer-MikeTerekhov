@@ -15,11 +15,15 @@ nltk.download('punkt')
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
+mongodb_connection_string = os.getenv('MONGODB_CONNECTION_STRING')
+openai_api_key_val = os.getenv('OPENAI_API_KEY')
+
 cluster = MongoClient("mongodb+srv://terekhovhd:GreighT131@cluster0.g38mbdx.mongodb.net/?retryWrites=true&w=majority")
+#cluster = MongoClient(mongodb_connection_string)
 db = cluster['myFirstDatabase']
 documents = db['documents']
 
-openai.api_key = "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"
+openai.api_key = openai_api_key_val
 
 @app.route('/')
 def home():
