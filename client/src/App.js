@@ -2,6 +2,12 @@ import logo from './logo.svg';
 import { useEffect, useState } from 'react';
 import jwt_decode from "jwt-decode";
 import './App.css';
+import React from 'react';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route}
+    from 'react-router-dom';
+import About from './components/pages/about';
+import Home from './components/pages/home';
 
 function App() {
   const [ user, setUser ] = useState({});
@@ -39,6 +45,15 @@ function App() {
 
   return (
     <div className="App">
+
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route exact path='/home' element={<Home />} />
+        <Route path='/about' element={<About/>} />
+      </Routes>
+    </Router>
+
      <div id = "signInDiv"></div>
      { Object.keys(user).length != 0 &&
         <button onClick = { (e) => handleSignOut(e)}>Sign Out</button>
