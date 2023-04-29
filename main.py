@@ -9,17 +9,19 @@ from textblob import *
 import openai
 import re
 import nltk
+from dotenv import load_dotenv
 nltk.download('brown')
 nltk.download('punkt')
 
 app = Flask(__name__)
+load_dotenv()
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+
 
 mongodb_connection_string = os.getenv('MONGODB_CONNECTION_STRING')
 openai_api_key_val = os.getenv('OPENAI_API_KEY')
 
-cluster = MongoClient("mongodb+srv://terekhovhd:GreighT131@cluster0.g38mbdx.mongodb.net/?retryWrites=true&w=majority")
-#cluster = MongoClient(mongodb_connection_string)
+cluster = MongoClient(mongodb_connection_string)
 db = cluster['myFirstDatabase']
 documents = db['documents']
 

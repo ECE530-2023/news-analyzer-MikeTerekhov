@@ -6,6 +6,13 @@ q = queue.Queue()
 
 import queue
 
+def worker():
+    while True:
+        item = q.get()
+        print(f'Working on {item}')
+        print(f'Finished {item}')
+        q.task_done()
+
 # Define a function to be called by the queue
 def my_function(arg1, arg2):
     # do something with the arguments
