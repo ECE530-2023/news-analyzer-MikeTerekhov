@@ -1,4 +1,6 @@
 # news-analyzer-MikeTerekhov
+This repository contains my PDF analysis project, along with examples of experimenting with queues/threading aswell as an example of making my own pip install package. As a part of the class I also chose to try and experiment with create the same app using React JS. As of current it only contain a method of using the Google authentication API, without any other applications.
+-------------------------------------------------------------------------
 - built seperate REST APIs to :
     - upload a PDF File
     - obtain sentiment of file
@@ -8,6 +10,30 @@
 - stores all documents and their respective analysis in a MongoDB.
 
 - Fully functioning frontend with HTML, CSS, and Javascript
+-------------------------------------------------------------------------
+# List of APIs
+- upload
+    - upload a PDF and checks the correct input
+    - saving to Mongo DB happens in here as well
+    - uses allowed_file fucntion to check file format
+- extract text
+    - scrapes the PDF and extracts all containing text and returns it
+- get summary
+    - utilizes OpenAI API to prompt the model to summarize the text of the respective document
+    - CREDIT CARD must be added to OpenAI accountt o make it functional
+    - cuts down summary to three sentances
+- get sentiment
+    - Uses TextBlob Python library to optain sentiment from text
+- document list
+    - displays all uploaded documents
+- document view
+    - renders page that shows link to NLP and the text that was extracted
+- NLP
+    - renders page that will show sentiment analysis, GPT summary, and also creates a feature where you can search how many times a certain word appears in the respective text
+- Sentiment def
+    - renders a page that shows the TextBlob website defentition for the sentiment value given that gives user insight on what the meaning of the analysis is 
+
+
 -------------------------------------------------------------------------
 # MongoDB
 
@@ -24,41 +50,14 @@
 # Schema
 ```
 {
-  _id: ObjectId(),
-  user_id: ObjectId(),
-  document_id: ObjectId()
+            "name": filename,
+            "type": "pdf",
+            "text": text,
+            "summary": summary,
+            "sentiment": sentiment
 }
 ```
---------------------------------
-Users:
-```
-{
-    User storing : [
-    {
-        id: ObjectId(),
-        name: String,
-        email: String,
-        password: String
-    }
-    ]
-}
-```
------------------------------------------------
-Documents:
-```
-{
-    Document storing: [
-    {   
-    "name": filename,
-    "type": "pdf",
-    "text": text,
-    "summary": get_summary(text),
-    "sentiment": get_sentiment(text)   
-    }
-    ]
-}
-```
--------------------------------------------
+-------------------------------------------------------------------------
 # Goals of sentiment analysis & web-scraping
 - extract all text from PDF
 - be able to obtain the overall sentiment of the document
