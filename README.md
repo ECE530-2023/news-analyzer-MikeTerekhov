@@ -1,5 +1,5 @@
 # news-analyzer-MikeTerekhov
-This repository contains my PDF analysis project, along with examples of experimenting with queues/threading aswell as an example of making my own pip install package. As a part of the class I also chose to try and experiment with create the same app using React JS. As of current it only contain a method of using the Google authentication API, without any other applications.
+This repository contains my PDF analysis project, along with examples of experimenting with queues/threading aswell as an example of making my own pip install package. As a part of the class I also chose to try and experiment with create the same app using React JS. At the moment, it only contains a method of using the Google authentication API, without any other applications.
 -------------------------------------------------------------------------
 - built seperate REST APIs to :
     - upload a PDF File
