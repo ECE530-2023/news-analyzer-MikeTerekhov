@@ -1,6 +1,9 @@
 # news-analyzer-MikeTerekhov
 This repository contains my PDF analysis project, along with examples of experimenting with queues/threading aswell as an example of making my own pip install package. As a part of the class I also chose to try and experiment with create the same app using React JS. At the moment, it only contains a method of using the Google authentication API, without any other applications.
 -------------------------------------------------------------------------
+# Installation
+To intall and get the main Python Flask server running simply clone this github repo, install all dependendncies, should cover eveything. Then run main.py and launch local host server ip adress in a browser. Note OpenAI API wont display the summary since I have not added a credit card to my account. 
+-------------------------------------------------------------------------
 - built seperate REST APIs to :
     - upload a PDF File
     - obtain sentiment of file
