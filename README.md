@@ -3,6 +3,7 @@ This repository contains my PDF analysis project, along with examples of experim
 -------------------------------------------------------------------------
 # Installation
 To intall and get the main Python Flask server running simply clone this github repo, install all dependendncies, should cover eveything. Then run main.py and launch local host server ip adress in a browser. Note OpenAI API wont display the summary since I have not added a credit card to my account. 
+ - To go to NL analsysis, click on NLP letters on page where all text is shown!
 -------------------------------------------------------------------------
 - built seperate REST APIs to :
     - upload a PDF File
